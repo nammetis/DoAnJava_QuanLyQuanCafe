@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.doanjava_quanlyquancafe.MainController" style="-fx-background-color: #F5F5F5;">
+   
+   <left>
+      <VBox spacing="10.0" style="-fx-background-color: #3E2723; -fx-pref-width: 220px; -fx-padding: 20;">
+         <children>
+            <Label text="CAFE MANAGER" style="-fx-text-fill: white; -fx-font-size: 20px; -fx-font-weight: bold; -fx-padding: 0 0 20 0;" />
+            
+            <Button text="🍵 Bán Hàng (POS)" onAction="#handleBanHang" prefWidth="180.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-font-size: 15px; -fx-alignment: center-left; -fx-cursor: hand;" />
+            
+            <Button fx:id="btnQuanLyMenu" text="📋 Quản Lý Menu" onAction="#handleQuanLyMenu" prefWidth="180.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-font-size: 15px; -fx-alignment: center-left; -fx-cursor: hand;" />
+            
+            <Button fx:id="btnQuanLyBan" text="🪑 Quản Lý Bàn" onAction="#handleQuanLyBan" prefWidth="180.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-font-size: 15px; -fx-alignment: center-left; -fx-cursor: hand;" />
+            
+            <Button fx:id="btnThongKe" text="📊 Thống Kê" onAction="#handleThongKe" prefWidth="180.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-font-size: 15px; -fx-alignment: center-left; -fx-cursor: hand;" />
+            
+            <Button text="🚪 Đăng Xuất" onAction="#handleLogout" prefWidth="180.0" style="-fx-background-color: #D32F2F; -fx-text-fill: white; -fx-font-size: 15px; -fx-cursor: hand; -fx-margin-top: 50;" VBox.vgrow="ALWAYS" />
+         </children>
+      </VBox>
+   </left>
+
+   <center>
+      <StackPane fx:id="mainContent" style="-fx-padding: 20;">
+         <Label text="Chào mừng bạn đến với hệ thống Quản Lý Quán Cafe!" style="-fx-font-size: 24px; -fx-text-fill: #5D4037;" />
+      </StackPane>
+   </center>
+</BorderPane>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.ComboBox?>
+
+<HBox xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.doanjava_quanlyquancafe.PosController" spacing="15.0" style="-fx-padding: 20;">
+    
+    <VBox HBox.hgrow="ALWAYS" spacing="10.0">
+        <Label text="THỰC ĐƠN" style="-fx-font-size: 16px; -fx-font-weight: bold; -fx-text-fill: #4E342E;" />
+        <TableView fx:id="tblDoUong" VBox.vgrow="ALWAYS">
+            <columns>
+                <TableColumn fx:id="colStt" text="STT" prefWidth="60.0" />
+                <TableColumn fx:id="colTen" text="Tên Đồ Uống" prefWidth="250.0" />
+                <TableColumn fx:id="colGia" text="Giá (VNĐ)" prefWidth="100.0" />
+            </columns>
+        </TableView>
+    </VBox>
+    <VBox prefWidth="400.0" spacing="10.0">
+        <Label text="GIỎ HÀNG" style="-fx-font-size: 16px; -fx-font-weight: bold; -fx-text-fill: #4E342E;" />
+        
+        <TableView fx:id="tblGioHang" VBox.vgrow="ALWAYS">
+            <columns>
+                <TableColumn fx:id="colGioTen" text="Tên Món" prefWidth="150.0" />
+                <TableColumn fx:id="colGioSL" text="SL" prefWidth="50.0" />
+                <TableColumn fx:id="colGioGia" text="Thành Tiền" prefWidth="120.0" />
+            </columns>
+        </TableView>
+        
+                <HBox spacing="10.0" alignment="CENTER_RIGHT" style="-fx-padding: 15 0 0 0;">
+            <Label text="Chọn Bàn: " style="-fx-font-size: 16px; -fx-font-weight: bold;" />
+            <ComboBox fx:id="cboBan" prefWidth="120.0" />
+            
+            <Label text="Tổng cộng: " style="-fx-font-size: 16px; -fx-font-weight: bold;" />
+            <Label fx:id="lblTongTien" text="0 VNĐ" style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: #D32F2F;" />
+            
+            <Button text="Xóa hết" onAction="#handleXoaTatCa" style="-fx-background-color: #9E9E9E; -fx-text-fill: white; -fx-font-weight: bold; -fx-padding: 10 20; -fx-cursor: hand;" />
+            
+            <Button text="THANH TOÁN" onAction="#handleThanhToan" style="-fx-background-color: #4CAF50; -fx-text-fill: white; -fx-font-weight: bold; -fx-padding: 10 20; -fx-cursor: hand;" />
+        </HBox>
+    </VBox>
+</HBox>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+
+<GridPane xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.doanjava_quanlyquancafe.MenuDialogController" hgap="10" vgap="15" alignment="CENTER">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+
+    <Label text="Tên Món:" GridPane.rowIndex="0" GridPane.columnIndex="0" />
+    <TextField fx:id="txtTenMon" GridPane.rowIndex="0" GridPane.columnIndex="1" prefWidth="200.0" />
+
+    <Label text="Giá Bán:" GridPane.rowIndex="1" GridPane.columnIndex="0" />
+    <TextField fx:id="txtGiaMon" GridPane.rowIndex="1" GridPane.columnIndex="1" />
+
+    <Label text="Danh Mục:" GridPane.rowIndex="2" GridPane.columnIndex="0" />
+    <ComboBox fx:id="cboDanhMuc" GridPane.rowIndex="2" GridPane.columnIndex="1" prefWidth="200.0" />
+
+    <!-- Chỉ có 2 nút Lưu và Hủy -->
+    <HBox spacing="10.0" alignment="CENTER_RIGHT" GridPane.rowIndex="3" GridPane.columnIndex="0" GridPane.columnSpan="2">
+        <Button text="Lưu" onAction="#handleLuu" style="-fx-background-color: #4CAF50; -fx-text-fill: white; -fx-cursor: hand;" />
+        <Button text="Hủy" onAction="#handleHuy" style="-fx-background-color: #9E9E9E; -fx-text-fill: white; -fx-cursor: hand;" />
+    </HBox>
+</GridPane>

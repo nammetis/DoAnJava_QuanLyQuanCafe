@@ -1,0 +1,63 @@
+.root {
+    -fx-font-family: "Segoe UI", "Arial", sans-serif;
+    -fx-background-color: #F4F6F9; /* Màu nền xám xanh nhạt rất dịu mắt */
+}
+.button {
+    -fx-background-color: #4E342E;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+    -fx-background-radius: 8;
+    -fx-padding: 8 15;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 5, 0, 0, 3);
+}
+.button:hover {
+    -fx-background-color: #6D4C41;
+}
+.button:pressed {
+    -fx-background-color: #3E2723;
+}
+.table-view {
+    -fx-background-color: white;
+    -fx-background-radius: 10;
+    -fx-border-color: #E0E0E0;
+    -fx-border-radius: 10;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.05), 10, 0, 0, 5);
+}
+.table-view .column-header {
+    -fx-background-color: #EFEBE9; 
+    -fx-font-weight: bold;
+    -fx-text-fill: #4E342E;
+    -fx-border-color: transparent transparent #D7CCC8 transparent;
+}
+.table-row-cell:odd {
+    -fx-background-color: #FAFAFA; 
+}
+.table-row-cell:even {
+    -fx-background-color: #FFFFFF;
+}
+.table-row-cell:selected {
+    -fx-background-color: #D7CCC8; 
+    -fx-text-fill: #3E2723;
+}
+
+.text-field, .password-field, .combo-box {
+    -fx-background-color: white;
+    -fx-background-radius: 5;
+    -fx-border-color: #BDBDBD;
+    -fx-border-radius: 5;
+    -fx-padding: 8;
+}
+.text-field:focused, .password-field:focused, .combo-box:focused {
+    -fx-border-color: #4E342E;
+}
+.scroll-bar {
+    -fx-background-color: transparent;
+}
+.scroll-bar .thumb {
+    -fx-background-color: #BCAAA4;
+    -fx-background-radius: 5;
+}
+.scroll-bar .thumb:hover {
+    -fx-background-color: #8D6E63;
+}

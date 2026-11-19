@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.doanjava_quanlyquancafe.ThongKeController" spacing="20.0">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+
+    <!-- KHU VỰC DOANH THU -->
+    <HBox spacing="30.0" alignment="CENTER_LEFT">
+        <!-- Thẻ doanh thu ngày -->
+        <VBox spacing="5.0" style="-fx-background-color: white; -fx-padding: 20; -fx-background-radius: 10; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 10, 0, 0, 5);">
+            <Label text="DOANH THU HÔM NAY" style="-fx-font-size: 14px; -fx-font-weight: bold; -fx-text-fill: #757575;" />
+            <Label fx:id="lblDoanhThuNgay" text="0 VNĐ" style="-fx-font-size: 28px; -fx-font-weight: bold; -fx-text-fill: #43A047;" />
+        </VBox>
+        
+        <!-- Thẻ doanh thu tháng -->
+        <VBox spacing="5.0" style="-fx-background-color: white; -fx-padding: 20; -fx-background-radius: 10; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 10, 0, 0, 5);">
+            <Label text="DOANH THU THÁNG NÀY" style="-fx-font-size: 14px; -fx-font-weight: bold; -fx-text-fill: #757575;" />
+            <Label fx:id="lblDoanhThuThang" text="0 VNĐ" style="-fx-font-size: 28px; -fx-font-weight: bold; -fx-text-fill: #1E88E5;" />
+        </VBox>
+    </HBox>
+
+    <!-- KHU VỰC BIỂU ĐỒ VÀ BẢNG -->
+    <HBox spacing="20.0" VBox.vgrow="ALWAYS">
+        <VBox HBox.hgrow="ALWAYS" spacing="10.0">
+            <Label text="BIỂU ĐỒ TOP 5 MÓN BÁN CHẠY" style="-fx-font-size: 16px; -fx-font-weight: bold; -fx-text-fill: #4E342E;" />
+            <BarChart fx:id="barChart" VBox.vgrow="ALWAYS" style="-fx-background-color: white; -fx-background-radius: 10; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.05), 10, 0, 0, 5);">
+                <xAxis>
+                    <CategoryAxis fx:id="xAxis" label="Tên Món" />
+                </xAxis>
+                <yAxis>
+                    <NumberAxis fx:id="yAxis" label="Số Lượng" />
+                </yAxis>
+            </BarChart>
+        </VBox>
+
+        <VBox prefWidth="350.0" spacing="10.0">
+            <Label text="CHI TIẾT TOP 5" style="-fx-font-size: 16px; -fx-font-weight: bold; -fx-text-fill: #4E342E;" />
+            <TableView fx:id="tblTop5" VBox.vgrow="ALWAYS">
+                <columns>
+                    <TableColumn fx:id="colTenMon" text="Tên Món" prefWidth="200.0" />
+                    <TableColumn fx:id="colSoLuong" text="Đã Bán" prefWidth="100.0" />
+                </columns>
+            </TableView>
+        </VBox>
+    </HBox>
+</VBox>
